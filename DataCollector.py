@@ -18,5 +18,3 @@ for coinName in coins:
     f.close()
 
 
-
-

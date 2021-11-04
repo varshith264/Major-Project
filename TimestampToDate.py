@@ -1,19 +1,17 @@
-from datetime import datetime
-import requests
-# dt_object = datetime.fromtimestamp(1483209000.0)
-dt = datetime.fromtimestamp(1502942400)
-
-# print(dt_object)
-print(dt)
-
-# # 1609439400, 1609871400, 1609871400
-
 # from datetime import datetime
+# import requests
+# dt = datetime.fromtimestamp(1635013500)
+# print(dt)
 
-# now = datetime(2021,1,7)
+# # 1634754600, 1635013800
 
-# timestamp = datetime.timestamp(now)
-# print("timestamp =", timestamp)
+# 1630953000, 1631212200
+
+from datetime import datetime
+now = datetime(2021,9,10)
+
+timestamp = datetime.timestamp(now)
+print("timestamp =", timestamp)
 
 
 # for BTC from 2017-08-17 09:30:00 to 2021-09-27 23:55:00
