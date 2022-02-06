@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaperPass</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="assessment-body">
+        <div class="MB15">
+            <div class="clearfix">
+                <div class="col-1 pull-left">
+                    <div class="assessment-area basic-information">
+                        <h4 data-lang="BasicInformation">Basic Information</h4>
+                        <ul class="papersource-list-group">
+                            <li>
+                                <div data-lang="PaperTitle">Title</div>
+                                <div class="paper-title">Inference first</div>
+                            </li>
+                            <li>
+                                <div data-lang="PaperTime">Time</div>
+                                <div>2021-11-05 12:40:57&nbsp;(&nbsp;-04:00 New York&nbsp;)</div>
+                            </li>
+                            <li>
+                                <div data-lang="PaperNumber">Words</div>
+                                <div>1115</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="similar col-2 pull-left">
+                    <div class="assessment-area">
+                        <h4 data-lang="OverallSimilarity">Overall Similarity</h4>
+                        <div class="first-level">
+                            <div class="similar-progress-group">
+                                <span class="similar-type" data-lang="OverallSimilarity">Overall Similarity</span>
+                                <span class="progress gray MR10">
+                                    <span class="progress-bar green" style="width: 17%;"></span>
+                                </span>
+                                <span class="g-font-color green percentage-span">17%</span>
+                            </div>
+                            <div class="second-level">
+                                <div class="similar-progress-group">
+                                    <span class="similar-type" data-lang="LocalLibrarySimilarity">Similarity degrees in local database</span>
+                                    <span class="progress gray MR10">
+                                        <span class="progress-bar green" style="width: 16%;"></span>
+                                    </span>
+                                    <span class="g-font-color green percentage-span">16%</span>
+                                </div>
+                                <div class="similar-progress-group">
+                                    <span class="similar-type" data-lang="InternetSimilarity">Similarity degrees in internet database</span>
+                                    <span class="progress gray MR10">
+                                        <span class="progress-bar green" style="width: 3%;"></span>
+                                    </span>
+                                    <span class="g-font-color green percentage-span">3%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="MT20">
+                            <h4 class="g-font-color green" data-lang="SimilarityCalculationFormula">Similarity Calculation Formula</h4>
+                            <p class="font-bold" data-lang="Formula">(Sentence1 similarity + Sentence2 similarity........ / n)</p>
+                            <p>
+                                <span class="MR10" data-lang="SimilarityRange">similarity scale from 0.0~1.0</span>
+                                <span data-lang="SimilarityRangeDetail">Green sentence reprensent similarity-free</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="MB15">
+            <div class="assessment-area">
+                <div class="clearfix">
+                    <h4 class="pull-left" data-lang="SimilarityDistribution">Sentences similarity distribution</h4>
+                    <div class="pull-right flex font-bold">
+                        <div class="distribution">
+                            <span class="distribution-map red"></span>
+                            <span>≥70%</span>
+                        </div>
+                        <div class="distribution">
+                            <span class="distribution-map yellow"></span>
+                            <span>40-70%</span>
+                        </div>
+                        <div class="distribution">
+                            <span class="distribution-map green"></span>
+                            <span><40%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="MB30" style="height:45px;background:gray;" id="barChart"></div>
+                <h4 data-lang="PointDistributionDiagram">Unqualificted sentences dotted distribution map</h4>
+                <div class="" style="height:370px;background:gray;" id="scatterChart"></div>
+            </div>
+        </div>
+        <div class="MB15">
+            <div class="assessment-area">
+                <h4 data-lang="LocalLibrariesTitle">Similar resources on local database</h4>
+                <ul class="source-list decimal PL30 LocalLibraries"><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">2.9%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 2.9%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>Accounting </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Dervis Kırıkkaleli </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>Crypto-currency: Empirical evidence from GSADF and wavelet coherence techniques</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>Crypto-currency: Empirical evidence from GSADF and wavelet coherence techniques</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Dervis Kırıkkaleli；Ersin Cağlar；Kelvin Onyibor</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>Accounting</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2020</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>199-208</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">2.4%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 2.4%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>Journal of Fluid Mechanics </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>R. CAMUSSI </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>Cross-wavelet analysis of wall pressure fluctuations beneath incompressible turbulent boundary layers</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>Cross-wavelet analysis of wall pressure fluctuations beneath incompressible turbulent boundary layers</span></div><div class="item"><span data-lang="Author">Author</span> : <span>R. CAMUSSI；G. ROBERT；M. C. JACOB</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>Journal of Fluid Mechanics</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2008</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>11-30</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">1.3%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 1.3%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>Soft Computing </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>P. Nagabushanam </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>EEG signal classification using LSTM and improved neural network algorithms</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>EEG signal classification using LSTM and improved neural network algorithms</span></div><div class="item"><span data-lang="Author">Author</span> : <span>P. Nagabushanam；S. Thomas George；S. Radha</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>Soft Computing</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2019,13</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>9981-10003</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">1.2%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 1.2%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>Annales Geophysicae </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>L. M. He </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>Is there a one-to-one correspondence between ionospheric anomalies and large earthquakes along Longmenshan faults?</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>Is there a one-to-one correspondence between ionospheric anomalies and large earthquakes along Longmenshan faults?</span></div><div class="item"><span data-lang="Author">Author</span> : <span>L. M. He；L. X. Wu；A. De Santis；S. J. Liu；Y. Yang</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>Annales Geophysicae</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2014,2</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>187-196</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">1.1%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 1.1%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>International Journal of Synthetic Emotions </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Subarno Pal </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>Sentiment Analysis in the Light of LSTM Recurrent Neural Networks</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>Sentiment Analysis in the Light of LSTM Recurrent Neural Networks</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Subarno Pal；Soumadip Ghosh；Amitava Nag</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>International Journal of Synthetic Emotions</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2018,1</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>33-39</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">1.1%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 1.1%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>Journal of Chemical Information and Modeling </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Sheng Chen </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>To Improve Protein Sequence Profile Prediction through Image Captioning on Pairwise Residue Distance Map</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>To Improve Protein Sequence Profile Prediction through Image Captioning on Pairwise Residue Distance Map</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Sheng Chen；Zhe Sun；Lihua Lin；Zifeng Liu；Xun Liu；Yutian Chong；Yutong Lu；Huiying Zhao；Yuedong Yang</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>Journal of Chemical Information and Modeling</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2019,1</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>391-399</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">1.1%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 1.1%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>Neurocomputing </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Yuting Wu </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>Remaining useful life estimation of engineered systems using vanilla LSTM neural networks</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>Remaining useful life estimation of engineered systems using vanilla LSTM neural networks</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Yuting Wu；Mei Yuan；Shaopeng Dong；Li Lin；Yingqi Liu</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>Neurocomputing</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2018</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>167-179</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">1.0%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 1.0%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>PLOS ONE </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Ross C. Phillips </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>Cryptocurrency price drivers: Wavelet coherence analysis revisited</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>Cryptocurrency price drivers: Wavelet coherence analysis revisited</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Ross C. Phillips；Denise Gorse</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>PLOS ONE</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2018,4</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>e0195200</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">1.0%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 1.0%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>Journal of Physics: Conference Series </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>T Lestari </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>Exploring the integrating potentials of role playing with YouTube in building student’s self confidence</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>Exploring the integrating potentials of role playing with YouTube in building student’s self confidence</span></div><div class="item"><span data-lang="Author">Author</span> : <span>T Lestari；E H Mulyana；I Nurzaman；G Gandana；E Apriyaningsih</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>Journal of Physics: Conference Series</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2019</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>012014</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">1.0%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 1.0%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>PLOS ONE </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Ladislav Kristoufek </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>What Are the Main Drivers of the Bitcoin Price? Evidence from Wavelet Coherence Analysis</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>What Are the Main Drivers of the Bitcoin Price? Evidence from Wavelet Coherence Analysis</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Ladislav Kristoufek</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>PLOS ONE</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2015,4</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>e0123923</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">1.0%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 1.0%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>SSRN Electronic Journal </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Yuen Lo </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>Blockchain and Bitcoin: Technological Breakthrough or the Latest Tulip Price Bubble?</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>Blockchain and Bitcoin: Technological Breakthrough or the Latest Tulip Price Bubble?</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Yuen Lo</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>SSRN Electronic Journal</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2017</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">0.7%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.7%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>Games </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Neil Gandal </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>Can We Predict the Winner in a Market with Network Effects? Competition in Cryptocurrency Market</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>Can We Predict the Winner in a Market with Network Effects? Competition in Cryptocurrency Market</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Neil Gandal；Hanna Halaburda</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>Games</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2016,3</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>16</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">0.6%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.6%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>The Journal of Alternative Investments </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>David LEE Kuo Chuen </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>Cryptocurrency: A New Investment Opportunity?</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>Cryptocurrency: A New Investment Opportunity?</span></div><div class="item"><span data-lang="Author">Author</span> : <span>David LEE Kuo Chuen；Li Guo；Yu Wang</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>The Journal of Alternative Investments</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2017,3</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>16-40</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">0.6%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.6%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>SSRN Electronic Journal </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>David Lee Kuo Chuen </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>Cryptocurrency: A New Investment Opportunity?</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>Cryptocurrency: A New Investment Opportunity?</span></div><div class="item"><span data-lang="Author">Author</span> : <span>David Lee Kuo Chuen；Li Guo；Yu Wang</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>SSRN Electronic Journal</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2017</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">0.5%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.5%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>Journal of Petroleum Science and Engineering </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Yan Zhang </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>Improvement of petrophysical workflow for shear wave velocity prediction based on machine learning methods for complex carbonate reservoirs</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>Improvement of petrophysical workflow for shear wave velocity prediction based on machine learning methods for complex carbonate reservoirs</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Yan Zhang；Hong-Ru Zhong；Zhong-Yuan Wu；Heng Zhou；Qiao-Yu Ma</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>Journal of Petroleum Science and Engineering</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2020</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>107234</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">0.5%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.5%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>Wireless Personal Communications </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Hongju Yan </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>Financial Time Series Prediction Based on Deep Learning</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>Financial Time Series Prediction Based on Deep Learning</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Hongju Yan；Hongbing Ouyang</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>Wireless Personal Communications</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2017,2</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>683-700</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">0.5%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.5%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>IEEE Geoscience and Remote Sensing Letters </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Yuting Yang </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>A CFCC-LSTM Model for Sea Surface Temperature Prediction</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>A CFCC-LSTM Model for Sea Surface Temperature Prediction</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Yuting Yang；Junyu Dong；Xin Sun；Estanislau Lima；Quanquan Mu；Xinhua Wang</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>IEEE Geoscience and Remote Sensing Letters</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2018,2</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>207-211</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">0.5%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.5%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>SSRN Electronic Journal </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Elke Weber </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>Risk Tolerance and Circumstances</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>Risk Tolerance and Circumstances</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Elke Weber；Joachim Klement</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>SSRN Electronic Journal</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2018</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">0.5%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.5%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>Financial Management </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Sanjiv R. Das </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>The future of fintech</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>The future of fintech</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Sanjiv R. Das</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>Financial Management</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2019,4</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>981-1007</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">0.5%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.5%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>Water Resources Management </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Yutao Qi </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>A Decomposition-Ensemble Learning Model Based on LSTM Neural Network for Daily Reservoir Inflow Forecasting</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>A Decomposition-Ensemble Learning Model Based on LSTM Neural Network for Daily Reservoir Inflow Forecasting</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Yutao Qi；Zhanao Zhou；Lingling Yang；Yining Quan；Qiguang Miao</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>Water Resources Management</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2019,12</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>4123-4139</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">0.5%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.5%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>Arabian Journal for Science and Engineering </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Lei Zhao </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>Short-Term Traffic Flow Intensity Prediction Based on CHS-LSTM</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>Short-Term Traffic Flow Intensity Prediction Based on CHS-LSTM</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Lei Zhao；Quanmin Wang；Biao Jin；Congmin Ye</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>Arabian Journal for Science and Engineering</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2020,12</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>10845-10857</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">0.5%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.5%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>Energy Conversion and Management </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Chuanjin Yu </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>A novel framework for wind speed prediction based on recurrent neural networks and support vector machine</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>A novel framework for wind speed prediction based on recurrent neural networks and support vector machine</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Chuanjin Yu；Yongle Li；Yulong Bao；Haojun Tang；Guanghao Zhai</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>Energy Conversion and Management</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2018</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>137-145</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">0.5%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.5%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>IEEE Access </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Hongju Cheng </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>Multi-Step Data Prediction in Wireless Sensor Networks Based on One-Dimensional CNN and Bidirectional LSTM</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>Multi-Step Data Prediction in Wireless Sensor Networks Based on One-Dimensional CNN and Bidirectional LSTM</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Hongju Cheng；Zhe Xie；Yushi Shi；Naixue Xiong</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>IEEE Access</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2019</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>117883-117896</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">0.5%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.5%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>Finance Research Letters </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Zhiyong Tu </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>Effect of bifurcation on the interaction between Bitcoin and Litecoin</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>Effect of bifurcation on the interaction between Bitcoin and Litecoin</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Zhiyong Tu；Changyong Xue</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>Finance Research Letters</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2019</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">0.5%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.5%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>Journal of Management Analytics </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Yang Lu </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>Blockchain and the related issues: a review of current research topics</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>Blockchain and the related issues: a review of current research topics</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Yang Lu</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>Journal of Management Analytics</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2018,4</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>231-255</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">0.5%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.5%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>SSRN Electronic Journal </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Jack Clark Francis </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>Bitcoins, Cryptocurrencies and BlockChains</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>Bitcoins, Cryptocurrencies and BlockChains</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Jack Clark Francis</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>SSRN Electronic Journal</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2019</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">0.5%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.5%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>Journal of International Financial Markets, Institutions and Money </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Pavel Ciaian </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>Virtual relationships: Short- and long-run evidence from BitCoin and altcoin markets</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>Virtual relationships: Short- and long-run evidence from BitCoin and altcoin markets</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Pavel Ciaian；Miroslava Rajcaniova；d'Artis Kancs</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>Journal of International Financial Markets, Institutions and Money</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2018</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>173-195</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">0.5%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.5%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>Environmental Pollution </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Xiang Li </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>Long short-term memory neural network for air pollutant concentration predictions: Method development and evaluation</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>Long short-term memory neural network for air pollutant concentration predictions: Method development and evaluation</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Xiang Li；Ling Peng；Xiaojing Yao；Shaolong Cui；Yuan Hu；Chengzeng You；Tianhe Chi</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>Environmental Pollution</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2017</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>997-1004</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">0.5%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.5%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>Environmental Science and Pollution Research </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Qinghong Zou </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>A water quality prediction method based on the multi-time scale bidirectional long short-term memory network</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>A water quality prediction method based on the multi-time scale bidirectional long short-term memory network</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Qinghong Zou；Qingyu Xiong；Qiude Li；Hualing Yi；Yang Yu；Chao Wu</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>Environmental Science and Pollution Research</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2020,14</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>16853-16864</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li><li eve-toggle="warp">
+                        <div class="flex">
+                            <div class="g-font-color green percent-span">0.5%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.5%;"></span>
+                            </div>
+                            <div class="g-arrow hand MR15" eve-toggle="btn">
+                                <span class="g-font-color green" data-lang="Details" eve-toggle="text">Details</span>
+                                <i class="g-arrow-i"></i>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span>Control Engineering Practice </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Author">Author</span> <span class="font-bold">:</span>
+                                <span>Xiaochuan Li </span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <span>Canonical variable analysis and long short-term memory for fault diagnosis and performance estimation of a centrifugal compressor</span>
+                            </div>
+                        </div>
+                        <div class="local-source-detail none" eve-toggle="section">
+                            <div><div class="item"><span data-lang="Title">Title</span> : <span>Canonical variable analysis and long short-term memory for fault diagnosis and performance estimation of a centrifugal compressor</span></div><div class="item"><span data-lang="Author">Author</span> : <span>Xiaochuan Li；Fang Duan；Panagiotis Loukopoulos；Ian Bennett；David Mba</span></div><div class="item"><span data-lang="Journal">Journal</span> : <span>Control Engineering Practice</span></div><div class="item"><span data-lang="Issue">Issue</span> : <span>2018</span></div><div class="item"><span data-lang="PageNumber">Page Number</span> : <span>177-191</span></div></div>
+                            <div class="MT5">
+                                <span class="g-arrow hand" eve-toggle-btn="close">
+                                    <span data-lang="PutAway" class="g-font-color green">Fold</span>
+                                    <i class="g-arrow-i"></i>
+                                </span>
+                             </div>
+                        </div>
+                    </li></ul>                <div class="ExpandCollapse text-center none MT15"><a href="#" class="g-font-color green" data-lang="ExpandAll">Unfold All</a></div>
+            </div>
+        </div>
+        <div class="MB15">
+            <div class="assessment-area">
+                <h4 data-lang="InternetSimilarResources">Similar Resources on Internet</h4>
+                <ul class="source-list decimal PL30 Internet"><li>
+                        <div class="flex LH32">
+                            <div class="g-font-color green percent-span">1.7%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 1.7%;"></span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span><span data-lang="Internet">Internet</span></span>
+                            </div>
+                            <div class="MR5">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <a href='https://en.wikipedia.org/wiki/Long_short-term_memory' target="_blank" rel="noopener noreferrer" class="g-font-color black">Long short-term memory - Wikipedia</a>
+                            </div>
+                            <a href='https://en.wikipedia.org/wiki/Long_short-term_memory' target="_blank" class="g-font-color black"><span class="icon iconfont icon-tiaozhuan"></span></a>
+                        </div>
+                    </li><li>
+                        <div class="flex LH32">
+                            <div class="g-font-color green percent-span">0.8%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.8%;"></span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span><span data-lang="Internet">Internet</span></span>
+                            </div>
+                            <div class="MR5">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <a href='https://www.researchgate.net/scientific-contributions/Stephen-Roberts-2135490909' target="_blank" rel="noopener noreferrer" class="g-font-color black">Stephen Roberts's research works | University of Oxford ...</a>
+                            </div>
+                            <a href='https://www.researchgate.net/scientific-contributions/Stephen-Roberts-2135490909' target="_blank" class="g-font-color black"><span class="icon iconfont icon-tiaozhuan"></span></a>
+                        </div>
+                    </li></ul>                <div class="ExpandCollapse text-center none MT15"><a href="#" class="g-font-color green" data-lang="ExpandAll">Unfold All</a></div>
+            </div>
+        </div>
+        <div class="paper-footer">
+            <div class="assessment-area">
+                <div data-lang="PaperFooter">This report is powerd by paperpass.net similarity detecting system</div>
+                <div><span data-lang="Copyright">Copyright</span> © 2021 <a href="https://www.paperpass.net/" target="_blank">PaperPass.Net</a></div>
+            </div>
+        </div>
+    </div>
+    <span style="display: none;">This__is__the__place__to__load__the__download__file__code.__The__offline__version__is__hidden,__but__the__online__version__will__have__it.</span>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/Lib.js"></script>
+<script src="js/detaildata.js"></script>
+<script src="js/language.js"></script>
+<script>
+    Report.report_id = '61855e94acbc4z46b';
+</script>
+<script>
+    (function (System, $) {
+        $(function() {
+            $(document).on('click', '[eve-toggle=btn]', function(event) {
+                var $this = $(this);
+                System.Paper.toggle.call(this, function() {
+                    $this.find('[eve-toggle="text"]').text(multilingual[leng].PutAway);
+                    $this.addClass('active');
+                }, function() {
+                    $this.find('[eve-toggle="text"]').text(multilingual[leng].Details);
+                    $this.removeClass('active');
+                });
+            });
+
+            $(document).on('click', '[eve-toggle-btn=close]', function(event) {
+                var $this = $(this).closest('[eve-toggle=warp]').find('[eve-toggle=btn]');
+                System.Paper.toggle.call(this, function() {
+                    $this.addClass('active');
+                }, function() {
+                    $this.find('[eve-toggle="text"]').text(multilingual[leng].Details);
+                    $this.removeClass('active');
+                });
+            });
+
+            if ($(".second-level").find(".third-level").length != 0 && $(".third-level").nextAll().length == 0) {
+                $(".second-level .similar-progress-group:last-child").removeClass("end-node");
+                $(".third-level .similar-progress-group:last-child").addClass("end-node");
+            } else {
+                $(".second-level .similar-progress-group:last-child").addClass("end-node");
+                $(".third-level .similar-progress-group:last-child").removeClass("end-node");
+            }
+            System.operateState.saveId(Report.report_id);
+            parent.postMessage("get_language", "*");
+            var leng = System.operateState.getLanguage(Report.report_id);
+            if (leng != '') {
+                leng = typeof multilingual[leng] == "undefined" ? "English" : leng;
+            } else {
+                leng = typeof multilingual[user_language] == "undefined" ? "English" : user_language;;
+            }
+            window.userLeng = leng;
+            SwitchMultilingual(leng);
+            function SwitchMultilingual(leng) {
+                $('*[data-lang]').each(function () {
+                    var name = $(this).data().lang;
+                    $(this).html(multilingual[leng][name]);
+                });
+            }
+            window.addEventListener("message", function(event) {
+                if (event.data.leng) {
+                    leng = event.data.leng;
+                    SwitchMultilingual(leng);
+                    System.operateState.saveLanguage(Report.report_id, leng);
+                }
+            });
+        });
+    })(Report, jQuery);
+</script>
+<script src="js/echarts.min.js"></script>
+<script>
+    var barChart = echarts.init(document.getElementById('barChart'));
+    var barData = [0,0,0,0,0,0,51,60,0,0,52,51,0,0,0,77,0,0,0,57,0,0,0,0,0,51,61,0,0,0,59,0,53,0,0,0,0,0,0,0,0,51,50,0,0,0,0,0,60,0,0,0,0,0,52,0,58,77,0,0,69,0,58,0,50,0,51,0,0,0,0,51,0,0,56,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,0,0,0,0];
+    var barXs = barData.map(function(item,i){
+        return i+1;
+    });
+    barData = barData.map(function (item,i) {
+        if (item < 40){
+            c = "#86c281";
+        }else if (item <70){
+            c = "#e4b55e";
+        }else{
+            c= "#f16d86"
+        }
+        return {value:1,itemStyle:{normal:{color:c,borderWidth:0},emphasis:{color:c}},silent:true,animation:false};
+    });
+    barOption = {
+
+        color: ['#3398DB'],
+        legend:{show:false},
+        silent : false,
+        animation:false,
+        grid: {
+            left:0,
+            right:10,
+            containLabel: false
+        },
+        tooltip:{
+            show:false
+        },
+        axisPointer:{show:false},
+        xAxis : [
+            {
+                type : 'category',
+                data : barXs,
+
+                axisLine:{show:false},
+                splitLine:{show:false}
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value',
+                show : false
+            }
+        ],
+        series : [
+            {
+                name:'',
+                type:'bar',
+
+                data:barData,
+                legendHoverLink:false,
+                barGap:0,
+                barCategoryGap:0
+            }
+        ]
+    };
+
+    barChart.setOption(barOption);
+</script>
+<script>
+    $(function () {
+        var scatterChart = echarts.init(document.getElementById('scatterChart'));
+        var scatterData = [0,0,0,0,0,0,51,60,0,0,52,51,0,0,0,77,0,0,0,57,0,0,0,0,0,51,61,0,0,0,59,0,53,0,0,0,0,0,0,0,0,51,50,0,0,0,0,0,60,0,0,0,0,0,52,0,58,77,0,0,69,0,58,0,50,0,51,0,0,0,0,51,0,0,56,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,0,0,0,0];
+        var scatterXs = scatterData.map(function(item,i){
+            return i+1;
+        });
+        scatterData = scatterData.map(function (item,i) {
+            c= "#e4b55e";
+            if (item>=70){
+                c="#f16d86";
+            }
+
+            return {value:item,symbolSize:4,itemStyle:{normal:{color:c,opacity:1},emphasis:{color:c}},silent:true,animation:false};
+        });
+
+
+        var scatterOption = {
+            color: ['#3398DB'],
+            legend:{show:false},
+            silent : false,
+            animation:false,
+            grid: {
+
+                right:10,
+                y:10,
+                x:40,
+                show:true,
+                backgroundColor:"#f6f6f6",
+                containLabel: false
+            },
+            tooltip:{
+                show:false
+            },
+            axisPointer:{show:false},
+            xAxis : [
+                {
+                    type : 'category',
+                    data : scatterXs,
+                    axisTick: {
+                        alignWithLabel: true
+                    },
+                    name:'X-' + multilingual[window.userLeng].Sentence,
+                    nameLocation:'middle',
+                    nameGap:25
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value',
+                    show : true,
+                    min:35,
+                    max:100,
+                    name:'Y-' + multilingual[window.userLeng].Similarity + '%',
+                    nameLocation:'middle',
+                    nameGap:25
+                }
+            ],
+            series : [
+                {
+
+                    type:'scatter',
+                    symbol:"circle",
+                    data:scatterData,
+                    legendHoverLink:false,
+                    // symbolSize:1130/369
+                }
+            ]
+        };
+
+        scatterChart.setOption(scatterOption);
+
+        $(window).resize(function () {
+            barChart.resize();
+            scatterChart.resize();
+        });
+    })
+</script>
+</html>

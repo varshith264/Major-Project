@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray">
+    <div class="doc-ctx">
+        <div class="alert alert-success" role="alert" data-lang="AlertSuccess">These contents which turn into green has been temprarily saved in your paper.</div>
+        <div class="paper-txt">
+            <p class="text-idt25" data-id="1">Structural analysis of cryptocurrency:Coherence during crash Chanduri Varshith，Challa Gowtham Naidu，Md.Shumail，Madiga Raghu Ram，K.Kamalakar Guide:Dr.Anup Aprem Abstract—With the recent advances in blockchain technology，the usage of cryptocurrency has been increasing continuously.Unlike traditional assets like stocks，gold，forex，cryptocurrencies are highly volatile，relatively unpredictable，market crashescan go down heftily which makes it very important to understand the structure of the cryptocurrency market.The current work focuses on two objectives in this regard:analyzing the coherence between the various cryptocurrencies during a crash cycle and proposing dynamic models that can predict price movements.</p><p class="text-idt25" data-id="2">I.INTRODUCTION Cryptocurrencies are considered to be the future of world ﬁnance.Cryptocurrencies are based on the blockchain technology and provide privateﬁnancial transactions with high security.Manyﬁnancial institutions like Goldman Sachs，JP Morgan etc are investing in crypto markets，El Salvador making bitcoin legal tender and Paypal offering crypto functionality.</p><p class="text-idt25" data-id="3">II.MOTIVATION Due to the popularity of Bitcoins(and cryptocurrencies in general)，a lot of ordinary investors(without much ﬁnancial knowledge)has added cryptocurrencies in their portfolio，for their short term and long term investment plans.Hence，it is vital to understand the relation between the various cryptocurrencies so as to provide timely information for portfolio risk management.</p><p class="text-idt25" data-id="4">III.LITERATURE SURVEY With cryptocurrency gaining popularity in recent times and with no trading restrictions，the cryptocurrency market is extremely volatile.Several deep learning models have been used in predicting these cryptocurrency prices.Some of the models include LSTM，HMM，GRU studied in[4].Wavelet coherence[1]has been used to study the interaction between bitcoin and other cryptocurrencies during a bitcoin crash.Along with the traditional models[4]a hybrid model using hidden markov model and optimised LSTM networks can be used[3].</p><p class="text-idt25" data-id="5">IV.WAVELET COHERENCE Wavelet Coherence is a method of analysing coherence which is used to analyse the interaction between the two time series or two variables.</p><p class="text-idt25" data-id="6">The wavelet transform is deﬁned by Ws(u，v)= Z ∞−∞ 1 √ u(t − v u)s(t)dt(1)The cross wavelet transform is deﬁned by Wrs(u，v)=Wr(u，v)W*s(u，s)(2)The wavelet coherence is deﬁned by R2 rs(u，v)= S(u-1Wrs(u，v)2 S(u-1 Wr(u，v)2)S(u-1 Ws(u，v)2)(3)Here S is a smoothing operator which is calculated using a weighted average or convolution in both time and scale directions.</p><p class="text-idt25" data-id="7">V.PROGRESS 1)Dataset collection:</p><p class="text-idt25" data-id="8">a)5 minute candlestick data of Bitcoin and Ethereum for wavelet coherence was collected using a Get request from Binance API.TABLE IVARIABLES DESCRIPTION Variables Meaning Open Price(USD)of the ﬁrst trade at the current time step High Highest Price(USD)oftrades at the current time step Low Lowest Price(USD)of trades at the current time step Close Price(USD)ofthe last trade before the next time step Volume Volume traded during the current time step Timestamp Ten digits integer that represents time b)15 minute candlestick data of top 10 cryptocurrencies from January 2017 to September 2021 using a python automation script，receiving the data from Binance API and then writing all the data to a CSV ﬁle.</p><p class="text-idt25" data-id="9">c)1 day candlestick data of Bitcoin，Ethereum for LSTM model was collected using a Get request from investing.com API 2)Structure analysis during crash:Determining wavelet coherence between Bitcoin and Ethereum during a 20%crash in bitcoin price.During a crash of one of the cryptocurrencies it is vital to”adjust”the portfolio with another cryptocurrency.In this regard，we utilize wavelet coherence analysis of intraday data with 5-minute resolution to investigate the dynamics between a variety of cryptocurrencies in time-frequency space.</p><p class="text-idt25" data-id="10">The coherence during the crash(Dec 19th to Dec 21st)is shown in Figure 1.</p><p class="text-idt25" data-id="11">3)Long Short Term Memory(LSTM)is an artiﬁcial Recurrent Neural Network(RNN)architecture used in the ﬁeld of deep learning unlike standard feedforward neural networks，LSTM has feedback connections and also have a good record in predicting cryptocurrencies.To evaluate the proposed LSTM model for predicting Bitcoin price，we have chosen 1-day frequency Bitcoin data from investing.com.The prediction from LSTM is shown in Fig 6.Fig.1.Wavelet coherence between Bitcoin and Ethereum during Dec 19th to 21st，2017[1]Fig.2.Wavelet coherence between Bitcoin and Ethereum during Sep 7th to 9th，2017 Fig.3.Wavelet coherence between Bitcoin and Litecoin during Sep 7th to 9th，2021Fig.4.Wavelet coherence between Bitcoin and Algorand during Sep 7th to 9th，2021 Fig.5.Wavelet coherence between Bitcoin and Solana during Sep 7th to 9th，2021 4)Inferences a)Correlation between Bitcoin and Ethereum in Fig.2.is less during September 2021 crash when compared to December 2017 crash in Fig.1.</p><p class="text-idt25" data-id="12">b)Among the top 10 current cryptocurrencies based on the market cap ’ s Algorand and Solana had the least correlationwith Bitcoin when compared to other cryptocurrencies during the recent September Bitcoin crash which is depicted in in Fig.4 and Fig.5 respectively.</p><p class="text-idt25" data-id="13">c)Over the period of 4 years we observed that the correlation between bitcoin and other altcoins is decreasing，meaning many altcoins are having their own signiﬁcance resulting to a better growth in the cryptocurrency market.Fig.6.Bitcoin Prediction VI.FUTURE WORK•Predict the conﬁdence intervals for potential crash or rise of a particular cryptocurrency using Gaussian Probability models.</p><p class="text-idt25" data-id="14">•Extend wavelet coherence analysis for multiple cryptocurrencies.</p><p class="text-idt25" data-id="15">•Include crypto greed fear index in the LSTM model to predict price.</p><p class="text-idt25" data-id="16">•Extend wavelet coherence analysis to cryptocurrency vs gold，oil etc.</p><p class="text-idt25" data-id="17">•Predict the 15 minute Bitcoin prices using different models such as Gaussian HMM，GRU.</p><p class="text-idt25" data-id="18">REFERENCES[1]Wolfgang Fruehwirt，Leonhard Hochﬁlzer，Leonard Weydemann，Stephen Roberts Cumulation，crash，coherency:A cryptocurrency bubble wavelet analysis[2]Nithyakani P，A Shanthini，Vivia Mary John，Rijo Jackson Tom，Vivia Mary John，Piyush Gupta，Vipul Sharma，“Prediction of Bitcoin Price Using Bi-LSTM Network”，2021.</p><p class="text-idt25" data-id="19">[3]Iman Abu Hashish，Fabio Forni，Gianluca Andreotti，Tullio Facchinetti，Shiva Darjani，“A Hybrid Model for Bitcoin Prices Prediction using Hidden Markov Models and Optimized LSTM Networks”，2019.</p><p class="text-idt25" data-id="20">[4]Xu，Y.(2020).Bitcoin Price Forecast Using LSTM and GRU Recurrent networks，and Hidden Markov Model.UCLA.ProQuest ID:Xu ucla 0031N 19347.</p><p class="text-idt25" data-id="21">Merritt ID:ark:/13030/m5zm10rh.Retrieved from https://escholarship.org/uc/item/70d9n5sd[5]W.Hoiles，A.Aprem，en V.Krishnamurthy，“Engagement dynamics and sensitivity analysis of YouTube videos”，arXiv[cs.SI].2016.</p><p class="text-idt25" data-id="22">[6]Faizaan Pervaiz，Christopher Goh，Ashley Pennington，Samuel Holt，James West，Shaun Ng(2020).Fear and Volatility in Digital Assets.</p><p class="text-idt25" data-id="23">[7]F.Ferdiansyah，S.Othman，R.Z.Raja Mohd Radzi，D.Stiawan，Y.Sazaki，en U.Ependi，“A LSTM-Method for Bitcoin Price Prediction:A Case Study Yahoo Finance Stock Market”，10 2019，bll 206 – 210.</p>        </div>
+        <div class="paper-footer">
+            <div data-lang="PaperFooter">This report is powerd by paperpass.net similarity detecting system</div>
+            <div><span data-lang="Copyright">Copyright</span> © 2021 <a href="https://www.paperpass.net/" target="_blank">PaperPass.Net</a></div>
+        </div>
+    </div>
+    <span style="display: none;">This__is__the__place__to__load__the__download__file__code.__The__offline__version__is__hidden,__but__the__online__version__will__have__it.</span>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/Lib.js"></script>
+<script src="js/detaildata.js"></script>
+<script src="js/language.js"></script>
+<script>
+    Report.report_id = '61855eab09bfdy6h5';
+</script>
+<script type="text/javascript">
+    (function (System,$) {
+        System.operateState.saveId(Report.report_id);
+        var cache = new System.Cache(System.report_id,localStorage);
+        $(function(){
+            $.each(cache.get(),function(){
+                $('[data-id='+this.id+']').addClass('g-font-color green').html(this.text);
+            });
+            var leng = System.operateState.getLanguage(Report.report_id);
+            if (leng != '') {
+                leng = typeof multilingual[leng] == "undefined" ? "English" : leng;
+            } else {
+                leng = typeof multilingual[user_language] == "undefined" ? "English" : user_language;;
+            }
+            parent.postMessage("get_language", "*");
+            SwitchMultilingual(leng);
+            function SwitchMultilingual(leng) {
+                $('*[data-lang]').each(function () {
+                    var name = $(this).data().lang;
+                    $(this).html(multilingual[leng][name]);
+                });
+            }
+            window.addEventListener("message", function(event) {
+                if (event.data.leng) {
+                    leng = event.data.leng;
+                    SwitchMultilingual(leng);
+                    System.operateState.saveLanguage(Report.report_id, leng);
+                }
+            });
+        });
+    })(Report,jQuery);
+</script>
+</html>
